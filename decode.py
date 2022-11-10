@@ -1,3 +1,7 @@
+from public_key import *
+from secret_key import *
+
+
 def grothdec(cipher):
 
     # decode

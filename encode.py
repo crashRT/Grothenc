@@ -1,3 +1,6 @@
+from public_key import *
+
+
 def grothenc(message: str):
     '''
     57を用いてRSA暗号を生成
