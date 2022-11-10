@@ -18,4 +18,5 @@ def grothenc(message: str):
     for hex in source:
         print(hex)
         c.append((hex ** e) % n)
-    return c
+    # return c
+    return " ".join(list(map(lambda x: "%02X" % x, c)))
