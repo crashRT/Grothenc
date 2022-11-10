@@ -7,8 +7,15 @@ def grothenc(message: str):
 
     # public key
     n = 57
-    e = 5
+    e = 29
 
     # encode
-    c = (int.from_bytes(source, 'big') ** e) % n
+
+    # 暗号化できるのはn以下の入力
+    # -> 16進数化した後一桁ずつ計算する
+
+    c = []
+    for hex in source:
+        print(hex)
+        c.append((hex ** e) % n)
     return c
