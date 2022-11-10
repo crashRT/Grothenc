@@ -5,10 +5,6 @@ def grothenc(message: str):
 
     source = message.encode('UTF-8')
 
-    # public key
-    n = 57
-    e = 29
-
     # encode
 
     # 暗号化できるのはn以下の入力

@@ -1,9 +1,4 @@
 def grothdec(cipher):
-    # public key
-    n = 57
-    e = 5
-    # secret key
-    d = 19
 
     # decode
     hex = bytes.fromhex(cipher)
