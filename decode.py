@@ -10,7 +10,7 @@ def grothdec(cipher):
     for number in hex:
         number = bytes.fromhex(number)
         number = int.from_bytes(number, 'big')
-        m = (number ** d) % 57
+        m = (number ** d) % n
         m = m.to_bytes(1, 'big')
         message.append(m.decode('UTF-8'))
     return message
