@@ -3,19 +3,18 @@ from public_key import *
 
 def grothenc(message: str):
     '''
-    57を用いてRSA暗号を生成
+    57を用いてRSA暗号化を行う
     '''
 
     source = message.encode('UTF-8')
-
-    # encode
-
-    # 暗号化できるのはn以下の入力
-    # -> 16進数化した後一桁ずつ計算する
-
+    print(source)
+    hex = source.hex()
+    print(hex)
     c = []
-    for hex in source:
-        print(hex)
-        c.append((hex ** e) % n)
-    # return c
-    return " ".join(list(map(lambda x: "%02X" % x, c)))
+    for text in hex:
+        print(text)
+        print((int(text, 16) ** e) % n)
+    return " ".join(list(map(lambda x: "%02d" % x, c)))
+
+
+print(grothenc("にゃーん"))
