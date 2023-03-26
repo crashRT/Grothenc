@@ -7,13 +7,10 @@ def grothenc(message: str):
     '''
 
     source = message.encode('UTF-8')
-    print(source)
     hex = source.hex()
-    print(hex)
     c = []
     for text in hex:
-        print(text)
-        print((int(text, 16) ** e) % n)
+        c.append((int(text, 16) ** e) % n)
     return " ".join(list(map(lambda x: "%02d" % x, c)))
 
 
