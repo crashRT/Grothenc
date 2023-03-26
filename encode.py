@@ -12,6 +12,3 @@ def grothenc(message: str):
     for text in hex:
         c.append((int(text, 16) ** e) % n)
     return " ".join(list(map(lambda x: "%02d" % x, c)))
-
-
-print(grothenc("にゃーん"))
